@@ -21,8 +21,9 @@ pipeline {
         }
         stage('deploy to s3'){
             steps{
-                sh 'aws s3 cp --recursive /home/ec2-user/.jenkins/workspace/my-app/build/ s3://danrey-project1/'
+                sh 'aws s3 cp --recursive /home/ec2-user/.jenkins/workspace/frontend-pipeline/build/ s3://danrey-project1/'
             }
         }
     }
 }
+
