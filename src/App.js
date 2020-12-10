@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Homepage from './components/pages/Homepage.js';
+import {AddPage} from './components/pages/AddPage.js';
+import Nav from "./components/pages/Nav.js"
+import Footer from "./components/pages/Footer.js"
+import {ListPage} from "./components/pages/ListPage.js"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Nav />
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Homepage}/>
+        <Route path="/add" component={AddPage}/>
+        <Route path="/view" component={ListPage}/>
+        <Route path="/" render={()=> <div>404 NOT FOUND :)</div>}/>  
+        
+      </Switch>
+    </Router>
+    <Footer />
+    </>
   );
 }
 
 export default App;
+
+//<Route path="/add" component={AddPage}/>

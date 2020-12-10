@@ -1,3 +1,176 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3{
+  padding-bottom: 20px;
+}
+
+/* Utility Classees */
+
+.my-container{
+  max-width: 75%;
+  margin: auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+
+.btn{
+  display: inline-block;
+  font-size: 18px;
+  color: #b3e458;
+  background: #000;
+  padding:10px 20px;
+  border:none;
+  cursor:pointer;
+  margin-top: 20px;
+}
+.btn:hover{
+  text-decoration: none;
+  background: #7ec003;
+	color: rgb(0, 0, 0);
+}
+
+#navbar {
+  background: #333;
+  color: #fff;
+  overflow: auto;
+}
+
+header{
+  height: 100px;
+  background: #0f110a;
+  display: block;
+}
+
+nav{
+  overflow: auto;
+}
+
+nav a{
+  color: rgb(9, 209, 59);
+}
+
+.nav-container{
+  width: 85%;
+	margin: auto;
+  overflow: auto;
+	padding: 0 10px;
+}
+
+.logo {
+	padding-top: 5px;
+	margin-left: 20px;
+	width: min-content;
+	display: inline-block;
+  font-size: 26pt;
+  font-weight: bold;
+}
+
+.logo a:hover {
+	text-decoration: none;
+	color: rgb(19, 151, 1);
+}
+
+nav ul {
+  float: right;
+  list-style: none;
+}
+
+nav ul li {
+  float: left;
+}
+
+.nav-btn {
+	background: none;
+	color: rgb(37, 202, 22);
+}
+
+nav ul li a, .nav-btn {
+  display: inline-block;
+  text-align: center;
+	padding: 20px;
+	font-size: large; 
+	border: 0;
+}
+
+nav ul li a:hover, .nav-btn:hover, nav ul li a.current-page, .nav-btn.current-page {
+	text-decoration: none;
+	color: #222;
+	background: rgb(123, 255, 71);
+}
+
+footer{
+  background: #000;
+  color: whitesmoke;
+  width: 100%;
+  left: 0;
+  position: fixed;
+  padding: 20px 10px;
+  text-align: center;
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* ShowCase */
+
+#showcase {
+  background: url('./images/music4.jpg') no-repeat center center;
+  height: 800px;
+  padding: 0 50px;
+}
+
+#showcase #showcase-content {
+  background: rgba(0, 0, 0, 0.8);
+  color: rgb(75, 175, 55);
+  text-align: center;
+  margin-top: 170px;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+#showcase #showcase-content h1 {
+  font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .App {
   text-align: center;
 }
