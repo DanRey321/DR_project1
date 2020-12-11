@@ -7,10 +7,16 @@ export default class User extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            LoggedIn: false
+            //LoggedIn: false
+            username: '',
+            password: ''
         };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    
+    /*
     submit = (event) => {
         event.preventDefault();
         console.log('test');
@@ -26,7 +32,29 @@ export default class User extends React.Component{
             }
         });
     }
-    
+    */
+
+    loging = (event) =>{
+        const user = document.getElementById('user').value;
+        const code = document.getElementById('password').value;
+        event.preventDefault();
+        const req = Axios.post(`http://18.191.201.76:8080/MusicianServer/user?username=${user}&userpass=${code}`, {}, {withCredentials: true})
+            .then((response) =>{
+                console.log(response);
+            });
+    }
+
+    values(event){
+        const target = event.target;
+        const value = target.type ==='checkbox' ? target.checked: target.value;
+        const name = target.name;
+        this.setState({
+            [name]:value
+        });
+
+    }
+
+
     render(){
 
         return(
@@ -34,14 +62,14 @@ export default class User extends React.Component{
             <div className="form-wrap">
                 <h1>Login</h1>
                 <p>Enter Username and Password:  </p>
-                <form>
+                <form onSubmit={this.loging}>
                     <div className="form-group">
                         <label htmlFor="musician-name">UserName</label>
-                        <input type="text" id="user" name="musician-name" />
+                        <input type="text" id="user" name="name" value={this.state.username} onChange={this.values} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="musician-code">Password</label>
-                        <input type="text" id="password" name="musician-code" /> 
+                        <input type="text" id="password" name="musician-code" value={this.state.password} onChange={this.values} /> 
                     </div>
                     
                     <button id="musician-submit" className="btn">Submit User</button>
