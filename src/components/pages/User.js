@@ -11,8 +11,8 @@ export default class User extends React.Component{
             username: '',
             password: ''
         };
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.values = this.values.bind(this);
+        this.loging = this.loging.bind(this);
     }
 
     
