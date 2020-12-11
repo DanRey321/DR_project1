@@ -9,7 +9,7 @@ export default class Homepage extends React.Component{
                     <div id="showcase-content">
                         <h1>Musician Lobby</h1>
                         <p>Music studio, storing data about a few musicians, their current mood, and what instruments they use.</p>
-                        <NavLink to="/add"><button className="btn">View Musicians</button></NavLink>
+                        <NavLink to="/view"><button className="btn">View Musicians</button></NavLink>
                         
                     </div>
                 </div>

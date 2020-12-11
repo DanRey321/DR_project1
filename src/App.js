@@ -12,8 +12,9 @@ import DeletePage from './components/pages/DeletePage.js';
 function App() {
   return (
     <>
-    <Nav />
+    
     <Router>
+      <Nav />
       <Switch>
         <Route exact path="/" component={Homepage}/>
         <Route path="/add" component={AddPage}/>
