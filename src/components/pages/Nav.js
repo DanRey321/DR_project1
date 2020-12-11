@@ -19,6 +19,7 @@ const NavBar = () => {
                             <li><NavLink to="/add"><button className="nav-btn">Add Musicians</button></NavLink></li>
                             <li><NavLink to="/delete"><button className="nav-btn">Delete Musicians</button></NavLink></li>
                             <li><NavLink to="/update"><button className="nav-btn">Update Musicians</button></NavLink></li>
+                            <li><NavLink to="/Login"><button className="nav-btn">Login</button></NavLink></li>
                             
                         </ul>
                     </div>

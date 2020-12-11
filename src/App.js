@@ -8,6 +8,7 @@ import Footer from './components/pages/Footer.js';
 import ListPage from './components/pages/ListPage.js';
 import UpdatePage from './components/pages/UpdatePage.js';
 import DeletePage from './components/pages/DeletePage.js';
+import Login from './components/pages/User.js'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/view" component={ListPage}/>
         <Route path="/update" component={UpdatePage}/>
         <Route path="/delete" component={DeletePage}/>
+        <Route path="/login" component={Login}/>
         <Route path="/" render={()=> <div>404 NOT FOUND :)</div>}/>  
         
       </Switch>
