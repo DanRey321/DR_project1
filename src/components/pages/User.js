@@ -13,12 +13,15 @@ export default class User extends React.Component{
 
     submit = (event) => {
         event.preventDefault();
+        console.log('test');
         const user = document.getElementById('user').value;
         const code = document.getElementById('password').value;
 
         Axios.post(`http://18.191.201.76:8080/MusicianServer/user?username=${user}&userpass=${code}`, {}, {withCredentials: true})
         .then(response => {
             if(response.status === 201){
+                console.log('test');
+                console.log(response.config['xsrfCookieName']);
                 this.setState({LoggedIn: true})
             }
         });
