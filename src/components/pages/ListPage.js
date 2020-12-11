@@ -7,7 +7,7 @@ const ListPage = () =>{
     
     const[musicians, setMusiicians] = useState([]);
     const getMusicians = async () => {
-        const response = await Axios.get("http://18.191.201.76:8080/MusicianServer/musician");
+        const response = await Axios.get("http://18.191.201.76:8080/MusicianServer/musician" , {}, {withCredentials: true, headers: {'Access-Control-Allow-Origin': 'http://localhost:3000'}});
         setMusiicians(response.data);
     }
 
