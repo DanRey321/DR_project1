@@ -6,8 +6,8 @@ const Musician = ({ musician }) => {
       <tr>
          <td>{musician.id}</td>
          <td>{musician.name}</td>
-         <td>{musician.role_id}</td>
-         <td>{musician.role}</td>
+         <td>{musician.mood}</td>
+         <td>{musician.instruments.map(instrument => <div>{instrument.instrument}</div> )}</td>
       </tr>
    )
 }
