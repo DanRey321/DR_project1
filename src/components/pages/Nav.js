@@ -1,29 +1,30 @@
-//import { render } from "@testing-library/react";
 import React from "react";
+//import { NavLink } from 'react-router-dom';
 
-export default class Showcase extends React.Component{
+const NavBar = () => {
 
    // state ={
    //     items:[]
     //}
 
-    render(){
+    
         return(
             <header>
                 <nav className="">
                     <div className="nav-container">
                         <div className="logo"><a href="/">Musicians Studio</a></div>
                         <ul>
-                            <li><buton className="nav-btn current-page" onClick={() => console.log('home btn called')}>Home</buton></li>
-                            <li><buton className="nav-btn" >Musicians</buton></li>
-                            <li><buton className="nav-btn" >Add Musicians</buton></li>
-                            <li><buton className="nav-btn" >Delete Musicians</buton></li>
-                            <li><buton className="nav-btn" >Update Musicians</buton></li>
+                            <li><button className="nav-btn" ><a href="/">Home</a></button></li>
+                            <li><button className="nav-btn" ><a href="/view">Musicians</a></button></li>
+                            <li><button className="nav-btn" ><a href="/add">Add Musicians</a></button></li>
+                            <li><button className="nav-btn" ><a href="/delete">Delete Musician</a></button></li>
+                            <li><button className="nav-btn" ><a href="/update">Update Musician</a></button></li>
                         </ul>
                     </div>
                 </nav>
             </header>
         );
-    }
+   
 
-}
+};
+export default NavBar;

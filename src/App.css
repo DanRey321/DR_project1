@@ -64,10 +64,10 @@ nav a{
 }
 
 .nav-container{
-  width: 85%;
-	margin: auto;
+  width: 97%;
+	margin: inherit;
   overflow: auto;
-	padding: 0 10px;
+	padding: 0 5px;
 }
 
 .logo {
@@ -95,21 +95,24 @@ nav ul li {
 
 .nav-btn {
 	background: none;
-	color: rgb(37, 202, 22);
+  color: rgb(77, 238, 59);
+  border-style: ridge;
+  border-color: #b3e458;
 }
 
 nav ul li a, .nav-btn {
   display: inline-block;
   text-align: center;
 	padding: 20px;
-	font-size: large; 
+  font-size: large;
+  font-weight: bold; 
 	border: 0;
 }
 
 nav ul li a:hover, .nav-btn:hover, nav ul li a.current-page, .nav-btn.current-page {
 	text-decoration: none;
 	color: #222;
-	background: rgb(123, 255, 71);
+	background: rgb(1, 182, 46);
 }
 
 footer{
@@ -117,11 +120,114 @@ footer{
   color: whitesmoke;
   width: 100%;
   left: 0;
+  bottom: 0;
   position: fixed;
   padding: 20px 10px;
   text-align: center;
+  border-color: #b3e458;
 
 }
+
+
+
+#musician-list{
+  margin: auto;
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 100px;
+
+}
+
+#musician-list h1{
+  font-size: 30px;
+}
+
+#musician-list table{
+  margin: auto;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+#musician-list table thead tr{
+  background-color: #7ec003;
+  color: #000;
+  text-align: left;
+  font-weight: bold;
+}
+
+#musician-list table th{
+  padding: 10px 20px;
+}
+#musician-list table td{
+  padding: 10px 20px;
+}
+#musician-list tbody tr {
+  background: #000;
+  border-bottom: 1px solid #ddd;
+  color: white;
+}
+
+#musician-form-main,
+#musician-form-delete,
+#musician-form-update{
+  margin: auto;
+  width: 50%;
+  margin-top: 20px;
+  background: #3d3f3d;
+  padding: 20px;
+  color: #fff;
+}
+
+#musician-form-main .form-wrap,
+#musician-form-delete .form-wrap,
+#musician-form-update .form-wrap{
+  padding: 15px 15px;
+}
+
+#musician-form-main .form-wrap h1,
+#musician-form-delete .form-wrap h1,
+#musician-form-update .form-wrap h1{
+  text-align: center;
+}
+
+#musician-form-main .form-wrap p,
+#musician-form-delete .form-wrap p,
+#musician-form-update .form-wrap p{
+  text-align: center;
+}
+
+#musician-form-main .form-wrap .form-group,
+#musician-form-delete .form-wrap .form-group,
+#musician-form-update .form-wrap .form-group{
+  margin-top: 15px;
+}
+
+#musician-form-main .form-wrap label,
+#musician-form-delete .form-wrap label,
+#musician-form-update .form-wrap label{
+  display: block;
+}
+
+#musician-form-main .form-wrap .form-group input,
+#musician-form-delete .form-wrap .form-group input,
+#musician-form-update .form-wrap .form-group input{
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: #555 solid 1px;
+}
+
+#musician-form-main .form-wrap button,
+#musician-form-delete .form-wrap button,
+#musician-form-update .form-wrap button{
+  width: 100%;
+  display: block;
+  padding: 10px;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+
 
 a {
   text-decoration: none;

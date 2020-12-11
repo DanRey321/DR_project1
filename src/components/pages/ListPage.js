@@ -1,18 +1,19 @@
-import React from "react";
-//import { Link } from "react-router-dom";
-//import Axios from "axios";
+import Axios from "axios";//import React from "react";
+import React, { useEffect, useState } from 'react';
+import Musician from "./Musician";
 
-class ListPage extends React.Component{
-    state = {
-        musician: []
-    };
+
+const ListPage = () =>{
+    
+    const[musicians, setMusiicians] = useState([]);
+    const getMusicians = async () => {
+        const response = await Axios.get("http://18.191.201.76:8080/MusicianServer/musician");
+        setMusiicians(response.data);
+    }
+
 
     /*
-    const getMusicians = async() => {
-        const response = await Axios.get();
-        console.log(response);
-    }
-    
+   
     componentDidMount(){
         Axios.get()
             .then((resp) => {
@@ -21,7 +22,11 @@ class ListPage extends React.Component{
             });
     }
 */
-    render(){
+
+        useEffect(() => {
+            getMusicians();
+        }, [ ])
+    
         return(
             <section id="musician-list">
                 <h1 id="musician-list-title">Musicians</h1>
@@ -35,6 +40,11 @@ class ListPage extends React.Component{
                         </tr>
                     </thead>
                     <tbody id="musician-table-data">
+                        {
+                            musicians.map(musician=>
+                                (<Musician musician={musician} key={musician.id}/>)
+                                )
+                        }
                         <tr>
                             <td>1</td>
                             <td>Daniel Reyes</td>
@@ -44,8 +54,8 @@ class ListPage extends React.Component{
                     </tbody>
                 </table>
             </section>
-        )
-    }
+        );
+    
 }
 
-export {ListPage}
+export default ListPage;
