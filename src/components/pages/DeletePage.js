@@ -14,7 +14,7 @@ export default class DeletePage extends React.Component {
         name: '',
     }
     //const dispatch = useDispatch();
-
+//
     handleChange = (e) =>{
     this.setState({name: e.target.value});
     }
