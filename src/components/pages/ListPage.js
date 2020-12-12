@@ -45,12 +45,7 @@ const ListPage = () =>{
                                 (<Musician musician={musician} key={musician.id}/>)
                                 )
                         }
-                        <tr>
-                            <td>1</td>
-                            <td>Daniel Reyes</td>
-                            <td>Jazz</td>
-                            <td>Keyboard</td>
-                        </tr>
+                        
                     </tbody>
                 </table>
             </section>

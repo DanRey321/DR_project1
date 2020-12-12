@@ -1,5 +1,6 @@
-import React from "react";
-//import Axios from 'axios';
+//import React from "react";
+import Axios from 'axios';
+import React, { useState } from "react";
 //import{useState} from "react";
 
 export const AddPage = () =>{
@@ -24,27 +25,27 @@ export const AddPage = () =>{
         this.setState({ [e.target.name]: e.target.value });
     }
 
-    handleSubmit = (e) => {
-        alert('A name was submitted: ' + this.state.value);
-        e.preventDefault();
-
-        const ObjectConfiguration = {
-            method: "POST",
-            headers:{
-                "Content-Type": "application/json",
-                Accept: "application/json",
-            },
-            body: JSON.stringify({
-                name: this.state.name,
-                mood: this.state.mood,
-                instruments: this.state.instruments
-            }),
-        };
-
-      }
-
 */
-    
+const[user,setUser] = useState({
+    name:"",
+    password:""
+})
+
+const handleChange = (e) =>{
+    setUser({...user,[e.target.name]: e.target.value});
+}
+
+const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('handle submit call');
+    //const name = document.getElementById('user').value;
+    //const password = document.getElementById('password').value;
+    Axios.post('localhost:8080/MusicianServer/musician' , user, {
+        withCredentials: true,
+      }).then((resp) => {
+        console.log(resp);
+      });
+}
 
 
     return(
