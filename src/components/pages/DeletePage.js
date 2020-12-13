@@ -20,6 +20,7 @@ const handleChange = (e) =>{
 const handleSubmit = (e) => {
     e.preventDefault();
     console.log('handle submit call');
+    //console.log(formData);
     const name = document.getElementById('user').value;
     //const password = document.getElementById('password').value;
     Axios.delete(`http://18.191.201.76:8080/MusicianServer/musician?name=${name}` , user, {
