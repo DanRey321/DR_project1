@@ -1,7 +1,7 @@
 //import React from "react";
 import Axios from 'axios';
 import React, { useState } from "react";
-//import{useState} from "react";
+//import { useHistory, useParams } from "react-router-dom";
 
 export const AddPage = () =>{
 
@@ -10,6 +10,8 @@ export const AddPage = () =>{
         mood: "",
         instruments: [],
     });
+
+    //cosnt [ Mname ]
 
     const handleSubmit = async (e) => {
         e.preventDefault();

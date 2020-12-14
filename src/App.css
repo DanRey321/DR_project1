@@ -128,6 +128,10 @@ footer{
 
 }
 
+#musician-list-title{
+  color:#7ec003;
+  padding: 10px;
+}
 
 
 #musician-list{
@@ -259,6 +263,12 @@ a {
 }
 #showcase2 {
   background: url('./images/music1.jpg') no-repeat center center;
+  height: 800px;
+  padding: 0 50px;
+}
+
+#showcase3 {
+  background: url('./images/music3.jpg') no-repeat center center;
   height: 800px;
   padding: 0 50px;
 }

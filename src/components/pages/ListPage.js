@@ -28,6 +28,7 @@ const ListPage = () =>{
         }, [ ])
     
         return(
+            <div id="showcase3">
             <section id="musician-list">
                 <h1 id="musician-list-title">Musicians</h1>
                 <table id="musician-table">
@@ -49,6 +50,7 @@ const ListPage = () =>{
                     </tbody>
                 </table>
             </section>
+            </div>
         );
     
 }
