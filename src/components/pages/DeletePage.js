@@ -51,5 +51,3 @@ const handleSubmit = (e) => {
 
 export default DeletePage;
 
-//value={user.password} onChange={handleChange}
-//value={user.name} onChange={handleChange}
