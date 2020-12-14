@@ -6,16 +6,16 @@ import Axios from "axios";
 //import { useDispatch } from "react-redux";
 
 const LoginPage = () => {
-    const[user,setUser] = useState({
+    const[user] = useState({
         name:"",
         password:""
     })
 
     //const dispatch = useDispatch();
 
-const handleChange = (e) =>{
-    setUser({...user,[e.target.name]: e.target.value});
-}
+// const handleChange = (e) =>{
+//     setUser({...user,[e.target.name]: e.target.value});
+// }
 
 const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,7 +30,8 @@ const handleSubmit = (e) => {
 }
 
     return(
-        <section id="musician-login">
+        <div id="showcase2">
+        <section id="musician-form-login">
                 <div className="form-wrap">
                     <h1>Login</h1>
                     <p>Enter Username and Password:  </p>
@@ -48,6 +49,7 @@ const handleSubmit = (e) => {
                     </form>
                 </div>
         </section>
+        </div>
     )
 }
 

@@ -6,16 +6,16 @@ import Axios from "axios";
 //import { useDispatch } from "react-redux";
 
 const DeletePage = () => {
-    const[user,setUser] = useState({
+    const[user] = useState({
         name:"",
         password:""
     })
 
     //const dispatch = useDispatch();
 
-const handleChange = (e) =>{
-    setUser({...user,[e.target.name]: e.target.value});
-}
+// const handleChange = (e) =>{
+//     setUser({...user,[e.target.name]: e.target.value});
+// }
 
 const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,10 +31,10 @@ const handleSubmit = (e) => {
 }
 
     return(
-        <section id="musician-login">
+        <section id="musician-form-delete">
                 <div className="form-wrap">
                     <h1>Delete Musician</h1>
-                    <p>Enter Username and Password:  </p>
+                    <p>Enter Username : </p>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="musician-name">UserName</label>
@@ -42,7 +42,7 @@ const handleSubmit = (e) => {
                         </div>
                 
                         
-                        <button id="musician-submit" className="btn">Submit User</button>
+                        <button id="musician-submit" className="btn">Submit Name</button>
                     </form>
                 </div>
         </section>

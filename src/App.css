@@ -170,7 +170,8 @@ footer{
 
 #musician-form-main,
 #musician-form-delete,
-#musician-form-update{
+#musician-form-update,
+#musician-form-login{
   margin: auto;
   width: 50%;
   margin-top: 20px;
@@ -179,39 +180,54 @@ footer{
   color: #fff;
 }
 
+#musician-form-update{
+background: url('./images/music1.jpg') no-repeat center center;
+}
+
+#background-main{
+  background: #000;
+}
+
+
 #musician-form-main .form-wrap,
 #musician-form-delete .form-wrap,
-#musician-form-update .form-wrap{
+#musician-form-update .form-wrap,
+#musician-form-login .form-wrap{
   padding: 15px 15px;
 }
 
 #musician-form-main .form-wrap h1,
 #musician-form-delete .form-wrap h1,
-#musician-form-update .form-wrap h1{
+#musician-form-update .form-wrap h1,
+#musician-form-login .form-wrap h1{
   text-align: center;
 }
 
 #musician-form-main .form-wrap p,
 #musician-form-delete .form-wrap p,
-#musician-form-update .form-wrap p{
+#musician-form-update .form-wrap p,
+#musician-form-login .form-wrap p{
   text-align: center;
 }
 
 #musician-form-main .form-wrap .form-group,
 #musician-form-delete .form-wrap .form-group,
-#musician-form-update .form-wrap .form-group{
+#musician-form-update .form-wrap .form-group,
+#musician-form-login .form-wrap .form-group{
   margin-top: 15px;
 }
 
 #musician-form-main .form-wrap label,
 #musician-form-delete .form-wrap label,
-#musician-form-update .form-wrap label{
+#musician-form-update .form-wrap label,
+#musician-form-login .form-wrap label{
   display: block;
 }
 
 #musician-form-main .form-wrap .form-group input,
 #musician-form-delete .form-wrap .form-group input,
-#musician-form-update .form-wrap .form-group input{
+#musician-form-update .form-wrap .form-group input,
+#musician-form-login .form-wrap .form-group input{
   width: 100%;
   padding: 10px;
   border-radius: 5px;
@@ -220,7 +236,8 @@ footer{
 
 #musician-form-main .form-wrap button,
 #musician-form-delete .form-wrap button,
-#musician-form-update .form-wrap button{
+#musician-form-update .form-wrap button,
+#musician-form-login .form-wrap button{
   width: 100%;
   display: block;
   padding: 10px;
@@ -240,8 +257,15 @@ a {
   height: 800px;
   padding: 0 50px;
 }
+#showcase2 {
+  background: url('./images/music1.jpg') no-repeat center center;
+  height: 800px;
+  padding: 0 50px;
+}
 
-#showcase #showcase-content {
+
+#showcase #showcase-content,
+#showcase2 #showcase-content {
   background: rgba(0, 0, 0, 0.8);
   color: rgb(75, 175, 55);
   text-align: center;
@@ -251,6 +275,9 @@ a {
 }
 
 #showcase #showcase-content h1 {
+  font-size: 30px;
+}
+#showcase2 #showcase-content h1 {
   font-size: 30px;
 }
 

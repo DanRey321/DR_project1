@@ -32,6 +32,7 @@ export const AddPage = () =>{
 
 
     return(
+    <div id="showcase2">
     <section id="musician-form-main">
         <div className="form-wrap">
             <h1>Add new musician</h1>
@@ -49,6 +50,7 @@ export const AddPage = () =>{
                 <div className="form-group">
                     <label htmlFor="musician-instruments">Musician Instruments</label>
                     <select type="text" name="instruments" id="musician-instruments" value={formData["instruments"]} onChange={handleArrayChange}  >
+                            <option value="">Choosse Instrument:</option>
                             <option value="Guitar">Guitar</option>
                             <option value="Keyboard">Keyboard</option>
                             <option value="Vocals">Vocals</option>
@@ -62,6 +64,7 @@ export const AddPage = () =>{
             </form>
         </div>
     </section>
+    </div>
     )
 }
 
